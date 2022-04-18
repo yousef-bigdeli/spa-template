@@ -2,11 +2,13 @@ import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import NotFound from "./Pages/NotFound";
 import Blogs from "./Pages/Blogs";
+import Blog from "./components/Blog";
 
 const routes = [
-  { path: "/", element: <Home />, exact: true },
-  { path: "/about-us", element: <AboutUs /> },
-  { path: "/blogs", element: <Blogs /> },
+  { path: "blogs/:id", element: <Blog /> },
+  { path: "blogs", element: <Blogs /> },
+  { path: "about-us", element: <AboutUs /> },
+  { path: "/", element: <Home /> },
   { path: "*", element: <NotFound /> },
 ];
 

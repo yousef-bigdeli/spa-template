@@ -1,0 +1,35 @@
+.menu-wrapper {
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 16px 24px;
+}
+.nav-menu {
+  display: flex;
+}
+
+.menu-item {
+  padding: 8px;
+  margin-left: 8px;
+}
+.menu-link {
+  font-size: 1.2rem;
+  color: #444;
+}
+.menu-link.active{
+  color: #8b5cf6;
+}
+
+.container{
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{
+  background-color: #ebebeb;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

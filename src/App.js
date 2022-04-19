@@ -7,9 +7,18 @@ function App() {
   return (
     <Layout>
       <Routes>
-        {routes.map((route) => (
-          <Route {...route} key={route.path} />
-        ))}
+        {routes.map((route) => {
+          if (route.subRoutes) {
+            return (
+              <Route {...route} key={route.path}>
+                {route.subRoutes.map((item) => (
+                  <Route {...item} key={item.path || item.id} />
+                ))}
+              </Route>
+            );
+          }
+          return <Route {...route} key={route.path || route.id} />;
+        })}
       </Routes>
     </Layout>
   );
